@@ -125,7 +125,12 @@ export function App() {
         <section className="panel-section">
           <div className="section-heading">
             <span>Slice</span>
-            <IconToggle active={sliceEnabled} label="Section" onClick={() => setSliceEnabled((value) => !value)}>
+            <IconToggle
+              active={sliceEnabled}
+              label="Section"
+              variant="danger"
+              onClick={() => setSliceEnabled((value) => !value)}
+            >
               <Crop size={16} />
             </IconToggle>
           </div>
@@ -320,11 +325,20 @@ interface IconToggleProps {
   children: React.ReactNode;
   label: string;
   onClick: () => void;
+  variant?: "default" | "danger";
 }
 
-function IconToggle({ active, children, label, onClick }: IconToggleProps) {
+function IconToggle({ active, children, label, onClick, variant = "default" }: IconToggleProps) {
   return (
-    <button className="icon-toggle" data-active={active} type="button" aria-pressed={active} onClick={onClick} title={label}>
+    <button
+      className="icon-toggle"
+      data-active={active}
+      data-variant={variant}
+      type="button"
+      aria-pressed={active}
+      onClick={onClick}
+      title={label}
+    >
       {children}
       <span>{label}</span>
     </button>

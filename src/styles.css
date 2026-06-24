@@ -225,6 +225,29 @@ h1 {
   background: #ffffff;
 }
 
+.icon-toggle[data-variant="danger"] {
+  border-color: #ff2f2f;
+  color: #ffffff;
+  background: #d40000;
+}
+
+.icon-toggle[data-variant="danger"][data-active="true"] {
+  border-color: #ff2f2f;
+  color: #d40000;
+  background: #ffffff;
+}
+
+.icon-toggle[data-variant="danger"]:hover {
+  border-color: #ff4a4a;
+  color: #d40000;
+  background: #ffffff;
+}
+
+.icon-toggle[data-variant="danger"][data-active="true"]:hover {
+  color: #ffffff;
+  background: #d40000;
+}
+
 .axis-picker {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
