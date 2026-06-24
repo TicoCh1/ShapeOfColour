@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Local artifacts and screenshots
+artifacts/
+
+# Local reference material
+git-references/
+reference/
+references/
+
+# Agent / assistant-local files
+AGENTS.md
+AGENT.md
+agent.md
+.agents/
+.codex/
+
+# Local Vite/dev logs
+.vite/
+.vite-dev.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment and OS/editor state
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
